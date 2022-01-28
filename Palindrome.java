@@ -1,37 +1,35 @@
 import java.util.Scanner;
 
-class Palindrome
+class Palindrome 
 {
-    public static void main(String args[])
+    public static void main(String[] args)
     {
-        int iValue = 0;
-        boolean bRet = false;
-
         Scanner sobj = new Scanner (System.in);
+        int iValue = 0;
 
-        System.out.println("Enter Number");
+        System.out.println("Enter number");
         iValue = sobj.nextInt();
 
-        Marvelllous mobj = new Marvelllous();
-        bRet = mobj.CheckPalindrome(iValue);
+        Demo dobj = new Demo();
+        boolean bRet = dobj.CheckPalindrome(iValue);
 
         if(bRet == true)
         {
-            System.out.println("Number is palindrome");
+            System.out.println("The number is palindrome");
         }
         else
         {
-            System.out.println("Number is not palindrome");
+            System.out.println("The number is not palindrome");
         }
     }
-
 }
 
-class Marvelllous
+class Demo
 {
     public boolean CheckPalindrome(int iNo)
     {
-        int iDigit = 0, iRev = 0, iTemp = iNo;
+        int iDigit = 0, iRev = 0;
+        int iTemp = iNo;
 
         while(iNo != 0)
         {
